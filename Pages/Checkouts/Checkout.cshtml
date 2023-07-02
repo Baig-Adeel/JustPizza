@@ -1,0 +1,23 @@
+﻿@page
+@model JustPizza.Pages.Checkouts.CheckoutModel
+@{
+}
+
+
+<h1>Your Order!</h1>
+@{
+    //var imagePath = "~/Images/" + Model.ImageTitle + ".png";
+}
+<div class="align-content-center">
+    <form method="post">
+         <div class="col-3 mx-auto mb-5">
+            <img src="@Model.ImageTitle" class="w-100" asp-append-version="true" />
+            <!--  <img src="~/Images/Create.png" class="w-100" />-->
+            <p>Please check Your Order and Confirm!!</p>
+            <p>Your Selected Pizza is: @Model.Name</p>
+            <p>Total Price for you Order is:£@Model.PizzaPrice</p>
+            <br/>
+            <button class="btn btn-primary mt-1 mx-auto" type="submit">Confirm Order</button>
+        </div>    
+    </form>   
+</div>

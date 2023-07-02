@@ -1,0 +1,40 @@
+﻿@page
+@model JustPizza.Pages.OrdersModel
+@{
+}
+<h2>Pizza Orders!!</h2>
+<hr/>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>
+                Id
+            </th>
+            <th>
+                Pizza Name
+            </th>
+            <th>
+                Price
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        
+            @foreach (var order in Model.pizzaOrders)
+            {
+                <tr>
+                    <td>
+                        @order.Id
+                    </td>
+                    <td>
+                        @order.PizzaName
+                    </td>
+                    <td>
+                        @order.FinalPrice
+                    </td>
+                </tr>
+            }
+        
+    </tbody>
+</table>
